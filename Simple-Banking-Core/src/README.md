@@ -1,33 +1,15 @@
-import java.util.ArrayList;
+# 🏦 Simple Banking Core
 
-public class BankSystem {
-    private ArrayList<Account> accounts = new ArrayList<>();
+A lightweight Java application simulating a digital banking backend.
 
-    public void addAccount(Account account) {
-        accounts.add(account);
-    }
+## 🚀 Professional Highlights
+* **Data Integrity**: Implemented private fields with public gateways (Getters/Setters) to ensure financial data security.
+* **Transaction Logic**: Robust methods for deposits and withdrawals with built-in validation (prevents negative balance).
+* **Collection Management**: Utilizes `ArrayList` to manage a dynamic database of bank accounts.
 
-    public void showAllAccounts() {
-        System.out.println("--- Bank Database Report ---");
-        for (Account acc : accounts) {
-            System.out.println(acc.getSummary());
-        }
-    }
+## 🛠️ Architecture
+1. **Account**: Represents the data model for a single user.
+2. **BankSystem**: Acts as the central controller to manage multiple accounts and simulate real-time operations.
 
-    public static void main(String[] args) {
-        BankSystem myBank = new BankSystem();
-
-        // Adding professional sample data
-        Account acc1 = new Account("Alice Vance", "IT001", 1500.00);
-        Account acc2 = new Account("Bob Miller", "IT002", 250.50);
-
-        myBank.addAccount(acc1);
-        myBank.addAccount(acc2);
-
-        // Simulating transactions
-        acc1.withdraw(200);
-        acc2.deposit(500);
-
-        myBank.showAllAccounts();
-    }
-}
+---
+*Status: Production-ready logic for educational exploration.*
